@@ -60,7 +60,7 @@ namespace App.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost("Quote_Shipping")]
-        public async Task<ActionResult<IEnumerable<ReturnQuote>>> QuoteShopping(ShippingRequest quoteProps)
+        public async Task<ActionResult<IEnumerable<ReturnQuote>>> QuoteShipping(ShippingRequest quoteProps)
         {
             try
             {
