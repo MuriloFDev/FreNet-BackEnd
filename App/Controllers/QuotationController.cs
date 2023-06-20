@@ -101,14 +101,14 @@ namespace App.Controllers
         }
 
         /// <summary>
-        /// Performs freight quotation
+        /// Performs cep quotation
         /// </summary>
         /// <returns></returns>
-        [HttpGet("QuoteByFreight/{Freight}")]
-        public async Task<ActionResult<IEnumerable<Quotation>>> GetQuoteByFreight(string Freight)
+        [HttpGet("QuoteByCep/{cep}")]
+        public async Task<ActionResult<IEnumerable<Quotation>>> GetQuoteByFreight(string cep)
         {
             var listQuote = await _context.Quotation
-                .Where(w => w.SellerCEP == Freight)
+                .Where(w => w.SellerCEP == cep)
                 .Take(10)
                 .ToListAsync();
                                        
